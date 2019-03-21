@@ -15,5 +15,4 @@
 		return $result;
    }
  ?>
-123
  
