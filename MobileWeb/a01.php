@@ -1,17 +1,21 @@
 <?php 
     session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1" >
+	<META HTTP-EQUIV="expires" CONTENT="0">
+	<META HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
 	<title>Document</title>
 	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
 	<script src="js/jquery-2.1.0.min.js"></script>
 	<script src="js/jquery.mobile-1.4.5.min.js"></script>
 	<script src="js/ACGfunc_goto.js"></script>
-
+	
 </head>
 
 
@@ -63,8 +67,8 @@
 
 
 <script>
+	
 	//---------------------------留言板按鈕，尚未完成----------------------------------------------
-
 	$(function(){
 		$.ajax({
 	      	type:"GET",
@@ -154,8 +158,13 @@
 				alert(data);
 			}
 	}
-</script>	
+	header("Refresh: 1; url=a01-0203.php");
 
+</script>	
+<?php 
+    session_destroy();
+    session_start();
+?>
 
 <body>
 	<!--a0100 開頭動畫-->
@@ -205,7 +214,7 @@
 		<div data-role="panel" id="a0501_a0101panel" data-position="right">
            	<a href="ACGlogin.php" data-role="button" data-theme="b" id="LogIN" data-icon="user" data-iconpos="right">登入</a>
            	<a href="Member_logout.php" data-role="button" data-theme="b" id="LogOUT" data-icon="user" data-iconpos="right">登出</a>
-			<a href="http://192.168.60.105/0223/ACG_a05.php" data-role="button" data-theme="b" id="Reg" data-icon="user" data-iconpos="right">註冊</a>
+			<a href="http://192.168.60.106/memberSystem/ACG_a05.php" data-role="button" data-theme="b" id="Reg" data-icon="user" data-iconpos="right">註冊</a>
 			<a href="#a0503" data-role="button" data-theme="b" id="Setting" data-icon="gear" data-iconpos="right">Setting</a>
        </div>
 
@@ -297,9 +306,9 @@
 			<div data-role="navbar"> 
 				<ul> 
 					<li><a href="#" onclick="goto_a01()" class="ui-btn-active"><img src="images/home.png" alt="" width="30"></a></li>
-          			<li><a href="#" onclick="goto_a02()"><img src="images/television.png" alt="" width="30"></a></li> 
-          			<li><a href="#" onclick="goto_a03()"><img src="images/running.png" alt="" width="30"></a></li>
-          			<li><a href="#" onclick="goto_a04()"><img src="images/calendar.png" alt="" width="30"></a></li> 
+		            <li><a href="#" onclick="goto_a02()"><img src="images/television.png" alt="" width="30"></a></li> 
+		            <li><a href="#" onclick="goto_a03()"><img src="images/running.png" alt="" width="30"></a></li>
+		            <li><a href="#" onclick="goto_a04()"><img src="images/calendar.png" alt="" width="30"></a></li>  
 				</ul> 
 			</div>
 
