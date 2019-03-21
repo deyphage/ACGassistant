@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+	<link href="css/lib/bootstrap.min.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	<link href="css/styles_tablet.css" rel="stylesheet">
+	<script src="js/jquery-2.1.0.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/ACGfunc_goto.js"></script>
+	<script>
+		// 側滑
+		 $( document ).on( "pagecreate", "#a0302", function() {
+             $( document ).on( "swipeleft swiperight", "#a0302", function( e ) {
+                  if ( $( ".ui-page-active" ).jqmData( "panel" ) !== "open" ) {
+                     if ( e.type === "swipeleft" ) {
+                          $( "#a0501_a0302panel" ).panel( "open" );
+                     } else if ( e.type === "swiperight" ) {
+                          $( "#a0301-panel" ).panel( "open" );
+                      }
+                 }
+              });
+          });
+		 //-----------------------------
+		 $(function(){
+		 	$.ajax({
+		 		type:"GET",
+		 		url:"getevent.php",
+		 		dataType:"json",
+		 		success:show,
+		 		error:function(){
+		 			alert("資料錯誤!");
+		 		}
+		 	});
+		 });
+		 function show(data){
+		 	//listview
+		 	for(i=0;i<data.length ; i++){
+		 		$("floList").append(
+		 			'<li id="'+data[i].floID+'" class="liclick"><a href="#a0403"><img src="images/'+data[i].floMemID+'"><h3>'+data[i].floItemID+'</h3><p>'+data[i].floType+'</p></a><a href="#"></a></li>'
+		 			);
+		 		// $("#floList").listview("refresh");
+		 	}
+		 	
+		 }
+		
+	</script>
+</head>
+<body>
+	<!-- a0402 -->
+	<div data-role="page" id="a0402">
+		<!-- a0401 -->
+		<div data-role="panel" id="a0401-panel" data-display="push">
+			<ul data-role="listview" data-inset="true">
+				<li data-role="list-divider">顯示格式</li>
+				<li data-icon="info"><a href="#a0402">Today</a></li>
+				<li data-icon="info"><a href="#a0403">All</a></li>
+			</ul>
+			<ul data-role="listview" data-inset="true">
+ 				<li data-icon="info"><a href="#a0404" data-rel="popup" data-position-to="window">Show</a></li>	
+			</ul>
+		</div>
+		<!-- a0401 end -->
+		<!-- 右側登入與設定panel -->
+		<div data-role="panel" id="a0501_a0302panel" data-position="right">
+           <a href="#a0502_a0302" data-role="button" data-rel="popup" data-theme="b" id="LogIn" data-icon="user" data-iconpos="right" data-position-to="window">Log In</a>
+			
+			<a href="#a0503" data-role="button" data-theme="b" id="Setting" data-icon="gear" data-iconpos="right">Setting</a>
+       </div>
+       <!-- a0501 設定選項 -->
+       <!--a0501 Log In 利用popup -->        
+        <div data-role="popup" id="a0502_a0302" data-dismissible="false">
+          <a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right" data-theme="b"  data-icon="arrow-r" >Close</a>
+            <div data-role="fieldcontain">
+                <label for=" username">帳號:</label>
+                <input type="text" name="username" id="username" value=""/> 
+            </div>
+                <div id="msg_username"></div>
+                    
+            <div data-role="fieldcontain">
+                <label for=" pwd">密碼:</label>
+                <input type="password" name="pwd" id="pwd" value="" />
+            </div>
+                <div id="msg_pwd"></div>
+
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <a href="#" data-role="button" data-theme="b" id="cancel">登入</a>
+                </div>
+                <div class="ui-block-b">
+                    <a href="#" data-role="button" data-theme="b" id="login-btn">註冊</a>
+                </div>
+            </div>  
+        </div>	 
+		<!-- a0404 -->
+		<div data-role="popup" id="a0404" data-dismissible="false">
+			<a href="#" data-role="button" data-icon="delete" data-theme="b" data-iconpos="notext" data-rel="back" class="ui-btn-right"></a>
+			<div data-role="fieldcontain">
+				<fieldset data-role="controlgroup">
+					<legend>show</legend>
+					<input type="checkbox" name="option" id="option1" value="同人活動">
+					<label for="option1">同人活動</label>
+					<input type="checkbox" name="option" id="option2" value="官方活動">
+					<label for="option2">官方活動</label>
+					<input type="checkbox" name="option" id="option3" value="在追番劇">
+					<label for="option3">在追番劇</label>
+				</fieldset>
+			</div>
+			<p>請勾選以上選項</p>
+			<a href="#a0302" data-role="button" data-rel="back" data-theme="b">確定</a>	
+		</div>
+		<!-- a0404 end -->
+
+
+		<div data-role="header" data-role="button" data-rel="back" data-theme="b" >
+			<!-- 側滑按鍵 -->
+			<a href="#a0401-panel" data-role="button"
+			data-theme="b" data-icon="arrow-r">leftpanel</a>
+			<!-- 頁首名稱 -->
+			<h1>My Activity</h1>
+			<a href="#a0501_a0302panel" data-role="button" data-theme="b" data-icon="gear" data-iconpos="notext">B</a>
+
+		</div>
+		<!-- 頁中 -->
+		<div role="main" class="ui-content">
+			<!-- 天氣顯示data -->
+			<script type="text/javascript" src="js/lib/jquery-3.1.1-min.js"></script>
+	 		<script type="text/javascript" src="js/cityData.js"></script>
+	  		<script type="text/javascript" src="js/WeatherScript.js"></script>
+	  		<!-- 天氣顯示data end -->
+				
+			<ul data-role="listview">
+				<li><a href="#"><img src="images/Anime01.jpg" alt=""><h3>活動一</h3><p>2019/01/14~2019/01/19</p></a></li>
+				<li><a href="#"><img src="images/Anime02.jpg" alt=""><h3>活動二</h3><p>2019/01/19~2019/01/24</p></a></li>
+			</ul>
+			
+		</div>
+		<div data-role="footer" data-theme="b" data-position="fixed">
+			<div data-role="navbar"><!-- 下方四個按鈕事件 -->
+				<ul> 
+					<li><a href="#" onclick="goto_a01()"><img src="images/home.png" alt="" width="30"></a></li>
+		            <li><a href="#" onclick="goto_a02()"><img src="images/television.png" alt="" width="30"></a></li> 
+		            <li><a href="#" onclick="goto_a03()"><img src="images/running.png" alt="" width="30"></a></li>
+		            <li><a href="#" onclick="goto_a04()" class="ui-btn-active"><img src="images/calendar.png" alt="" width="30"></a></li> 
+				</ul> 
+			</div>
+		</div>
+	</div>
+
+
+	<!-- a0403 -->
+		<div data-role="page" id="a0403">
+			<div data-role="header" data-role="button" data-rel="back" data-theme="b">
+			<!-- 側滑按鍵 -->
+			<a href="#a0401-panel" data-role="button"
+			data-theme="b" data-icon="arrow-r">leftpanel</a>	
+			<!-- a0403抬頭名稱 -->
+			<h1>Today</h1>
+			<a href="#a0501_a0302panel" data-role="button" data-theme="b" data-icon="gear" data-iconpos="notext">B</a>
+			</div>
+			<div role="main" class="ui-content">
+				<!-- listview -->
+				<ul data-role="listview" id="floList"
+				data-split-icon="heart" data-split-theme="a">
+				<!-- <li><a href="#a0403"><img src="images/eve01.jpg" alt="">
+                    <h3>followName01</h3>
+                    <p>2019/03/15-2019/05/17</p>
+                    <p>地點01</p>
+                    <a href="#"></a>
+                </a></li> -->
+					
+				</ul>
+				
+			</div>
+			<div data-role="footer" data-theme="b" data-position="fixed">
+				<div data-role="navbar"><!-- 下方四個按鈕事件 -->
+					<ul> 
+						<li><a href="#" onclick="goto_a01()"><img src="images/home.png" alt="" width="30"></a></li>
+			            <li><a href="#" onclick="goto_a02()"><img src="images/television.png" alt="" width="30"></a></li> 
+			            <li><a href="#" onclick="goto_a03()"><img src="images/running.png" alt="" width="30"></a></li>
+			            <li><a href="#" onclick="goto_a04()" class="ui-btn-active"><img src="images/calendar.png" alt="" width="30"></a></li>  
+					</ul> 
+				</div>
+			</div>
+		</div>
+			<!-- a0503 Setting -->      
+	<div data-role="page" id="a0503">
+	    <div data-role="header" data-theme="b" data-position="fixed" >
+	   		<a href="#" data-role="button" data-rel="back" data-theme="b" class="ui-btn-left" data-icon="arrow-l" data-iconpos="notext">Left</a>
+			<h1>Setting</h1>
+	    </div>
+	        
+		<div role="main" class="ui-content">
+		  	<div data-role="fieldcontain">
+			    <fieldset data-role="controlgroup">
+			    	<legend>通知</legend>
+			     	<input type="checkbox" name="checkbox1" id="checkbox1_0" class="custom" value="" />
+		     		<label for="checkbox1_0">番劇更新</label>
+		    	 	<input type="checkbox" name="checkbox1" id="checkbox1_1" class="custom" value="" />
+		     		<label for="checkbox1_1">活動提醒</label>
+		     	</fieldset>
+		    </div>
+
+		   	<div data-role="fieldcontain">
+		    	<label for="selectmenu01" class="select">通知提醒<p>番劇</p></label>
+		    	<select name="selectmenu01" id="selectmenu01">
+		    		<option value="option1">10 mins</option>
+		    		<option value="option2">2 hrs</option>
+		    		<option value="option3">5 hrs</option>
+		    	</select>
+		    
+		    	<label for="selectmenu02" class="select"><p>活動</p></label>
+			    <select name="selectmenu02" id="selectmenu02">
+				    <option value="option1">1 Day</option>
+				    <option value="option2">3 Days</option>
+		    		<option value="option3">7 Days</option>
+		    	</select>
+			</div>  
+			<div>
+		  		<p>其他
+			    <p>回報問題</p>
+			    <p>About Us</p>
+		  		</p>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>		

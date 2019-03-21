@@ -1,0 +1,24 @@
+.a0203_logo1{
+		width: 200px;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+.a0203_pimg01{
+		/*陰影*/
+		box-shadow: 4px 20px 10px 2px #aaa;
+		/*變圓角*/
+		border-radius:30px;
+	}
+
+.a0203_ptext h1{
+		color: #0B09FA;
+	}
+.a0203_ptext h3{
+		color: #FC0606;
+	}
+	   h4{
+		color: #068B49
+	}

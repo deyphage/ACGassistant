@@ -1,0 +1,36 @@
+
+.a0303_logo{   /*架設一個框把圖片放進去*/
+	width: 220px;
+	margin-top: 0;
+	margin-bottom:0;
+	margin-right: auto;
+	margin-left: auto; 
+}
+.a0303_pimg01{
+		/*陰影*/
+		box-shadow: 20px 20px 50px 20px #aaa;
+		/*變圓角*/
+		border-radius:30px;
+	}
+.a0303_ptext h1{
+		color: #A3A3FF;
+	}
+.a0303_ptext h3{
+		color: #0000A8;
+	}
+	   h4{
+		color: #00A800
+	}
+#map_div{
+      width: 400px;
+      height: 600px;
+      box-shadow: 2px 2px 2px 3px #ccc;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-right: auto;
+      margin-left: auto;
+    }
+.info{
+      color: #fa0;
+    }
+   

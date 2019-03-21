@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+	<script src="js/jquery-2.1.0.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+  <script src="js/ACGfunc_goto.js"></script>
+	<link rel="stylesheet" href="css/a02.css">
+	<script>
+
+		$(function() {
+
+			$("#back").bind("click",stopVideo);
+      
+      $.ajax({
+        type:"GET",
+        url:"getanimation.php",
+        dataType:"json",
+        success:show,
+        error: function(){
+            alert("糟糕!!有BUG!!")
+          }
+      });
+		});
+    function show(data){
+      for ( i =0; i <data.length; i++) {//*********listview
+        $("#aniList").append(
+            '<li id="'+data[i].aniID+'" class="liclick"><a href="#a0203"><img src="images/'+data[i].aniPic+'.jpg"><h3>'+data[i].aniName+'</h3><p>'+data[i].aniStartDate+'-'+data[i].aniEndDate+'</p></a><a href="#"></a></li>');
+        
+        }
+      $("#aniList").listview("refresh");
+        $('.liclick').click(function() {//***********listview監聽
+        	$("#a0203_content").empty("");
+          var j=($(this).attr("id"))-1;
+
+          $("#a0203_content").append('<img src="images/'+data[j].aniPic+'.jpg" width="100%" class="a0203_pimg01" id="pimg"><div class="a0203_ptext"><p><h1 id="pname">'+data[j].aniName+'</h1></p><p><h3 id="date">'+data[j].aniStartDate+'-'+data[j].aniEndDate+'</h3></p><h4 id="contain">'+data[j].aniInfo+'<a class="ui-btn ui-icon-heart ui-btn-inline ui-btn-icon-notext"></a></h4>');
+
+            anisrc="https://www.youtube.com/embed/"+data[j].aniTrailer+"?enablejsapi=1";
+          $("#a0203_youtube").attr("src",anisrc);
+          $("#a0203 h1").html(data[j].aniName);
+        });
+      }
+// ************youtube******************
+      var tag = document.createElement('script');
+      tag.id = 'iframe-demo';
+      tag.src = 'https://www.youtube.com/iframe_api';
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('a0203_youtube', {
+            events: {
+              'onReady': onPlayerReady,
+              'onStateChange': onPlayerStateChange
+              // 'origin': location.protocol + '//' + location.hostname + "/"
+            }
+        });
+      }
+      function onPlayerReady(event) {
+        document.getElementById('a0203_youtube').style.borderColor = '#FF6D00';
+      }
+      function changeBorderColor(playerStatus) {
+        var color;
+        if (playerStatus == -1) {
+          color = "#37474F"; // unstarted = gray
+        } else if (playerStatus == 0) {
+          color = "#FFFF00"; // ended = yellow
+        } else if (playerStatus == 1) {
+          color = "#33691E"; // playing = green
+        } else if (playerStatus == 2) {
+          color = "#DD2C00"; // paused = red
+        } else if (playerStatus == 3) {
+          color = "#AA00FF"; // buffering = purple
+        } else if (playerStatus == 5) {
+          color = "#FF6DOO"; // video cued = orange
+        }
+        if (color) {
+          document.getElementById('a0203_youtube').style.borderColor = color;
+        }
+      }
+      function onPlayerStateChange(event) {
+        changeBorderColor(event.data);
+      }
+
+      function stopVideo() {
+        $("#a0203_content").empty("");
+          player.stopVideo();
+        }
+
+    </script>
+</head>
+<body>
+	<!-- a0202 -->
+	<div data-role="page" id="a0202">
+		<!-- a0201 -->
+		<div data-role="panel" id="a0201-panel" data-display="push">
+			<img src="images/a0202_p01.jpg" alt="" width="30%">
+			<ul data-role="listview" data-inset="true">
+				<li data-role="list-divider">顯示格式</li>
+				<li data-icon="home"><a href="#a0203" data-icon="home">日曆</a></li>
+				<li data-icon="info"><a href="#a0203">列表</a></li>
+				<li data-icon="info"><a href="#a0203">當前周播表</a></li>
+				<li data-icon="info"><a href="#a0203">我的追番List</a></li>	
+			</ul>
+		</div>
+
+		<!-- 右側登入與設定panel -->
+		<div data-role="panel" id="a0501_a0202panel" data-position="right">
+           <a href="#a0502_a0202" data-role="button" data-rel="popup" data-theme="b" id="LogIn" data-icon="user" data-iconpos="right" data-position-to="window">Log In</a>
+			<a href="#a0503" data-role="button" data-theme="b" id="Setting" data-icon="gear" data-iconpos="right">Setting</a>
+       </div>
+       		<!--a0501 Log In 利用popup -->        
+        <div data-role="popup" id="a0502_a0202" data-dismissible="false">
+          <a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right" data-theme="b"  data-icon="arrow-r" >Close</a>
+            <div data-role="fieldcontain">
+                <label for=" username">帳號:</label>
+                <input type="text" name="username" id="username" value=""/> 
+            </div>
+                <div id="msg_username"></div>
+                    
+            <div data-role="fieldcontain">
+                <label for=" pwd">密碼:</label>
+                <input type="password" name="pwd" id="pwd" value="" />
+            </div>
+                <div id="msg_pwd"></div>
+
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <a href="#" data-role="button" data-theme="b" id="cancel">登入</a>
+                </div>
+                <div class="ui-block-b">
+                    <a href="#" data-role="button" data-theme="b" id="login-btn">註冊</a>
+                </div>
+            </div>  
+        </div>
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<!-- 側邊滑按鍵 -->
+			<a href="#a0201-panel" data-role="button" data-theme="b"  data-icon="arrow-r">leftpanel</a>
+			<!-- 抬頭名稱 -->
+			<h1>Animation</h1>
+			<a href="#a0501_a0202panel" data-role="button" data-theme="b"  data-icon="gear"  data-iconpos="notext">A</a>
+		</div>
+		<!-- 頁中 -->
+		<div role="main" class="ui-content">
+      
+			<!-- listview -->
+			<ul data-role="listview" id="aniList" data-split-icon="heart" data-split-theme="a">
+      </ul>
+    </div>
+		<!-- 頁尾 -->
+		<div data-role="footer" data-position="fixed" data-theme="b">
+				<!--下排四個按鈕案件-->		
+			<div data-role="navbar"> 
+				<ul> 
+					<li><a href="#" onclick="goto_a01()"><img src="images/home.png" alt="" width="30"></a></li>
+          <li><a href="#" onclick="goto_a02()" class="ui-btn-active"><img src="images/television.png" alt="" width="30"></a></li> 
+          <li><a href="#" onclick="goto_a03()"><img src="images/running.png" alt="" width="30"></a></li>
+          <li><a href="#" onclick="goto_a04()"><img src="images/calendar.png" alt="" width="30"></a></li>  
+				</ul> 
+			</div>
+		</div>
+	</div>
+
+
+		<!-- a0203 -->
+<div data-role="page" id="a0203">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<a href="#a0202" data-icon="arrow-l" id="back">Back</a>
+			<h1>Animation</h1>
+		</div>
+		<div role="main" class="ui_content" >
+			<div id="a0203_content"></div>
+		  <iframe id="a0203_youtube"
+          width="400" height="300"
+          src="https://www.youtube.com/embed/7S3UV4Goy2w?enablejsapi=1"
+          frameborder="0"
+          style="border: solid 4px #37474F;margin:auto"
+      	  ></iframe>
+    </div>
+
+		<!-- 頁尾 -->
+		<div data-role="footer" data-position="fixed" data-theme="b">
+				<!--下排四個按鈕案件-->		
+			<div data-role="navbar"> 
+				<ul> 
+					  <li><a href="#" onclick="goto_a01()"><img src="images/home.png" alt="" width="30"></a></li>
+          <li><a href="#" onclick="goto_a02()" class="ui-btn-active"><img src="images/television.png" alt="" width="30"></a></li> 
+          <li><a href="#" onclick="goto_a03()"><img src="images/running.png" alt="" width="30"></a></li>
+          <li><a href="#" onclick="goto_a04()"><img src="images/calendar.png" alt="" width="30"></a></li>   
+				</ul> 
+			</div>
+		</div>
+    </div>
+</div>
+</body>
+</html>
