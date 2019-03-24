@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFB3F7F1"
+    android:padding="10dp"
+    tools:context=".Weather">
+
+    <Spinner
+        android:id="@+id/spnName"
+        style="@style/AppTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="1dp"
+        android:alwaysDrawnWithCache="true"
+        android:background="@android:drawable/btn_dropdown"
+        android:dropDownWidth="match_parent"
+        android:keepScreenOn="true" />
+
+    <TextView
+        android:id="@+id/city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spnName"
+        android:layout_alignStart="@+id/spnName"
+        android:layout_alignLeft="@+id/spnName"
+        android:paddingTop="15dp"
+        android:text="Hello World!"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/city"
+        android:layout_alignStart="@+id/city"
+        android:layout_alignLeft="@+id/city"
+        android:paddingTop="5dp"
+        android:text="@string/temp"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/humd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/temp"
+        android:layout_alignStart="@+id/city"
+        android:layout_alignLeft="@+id/city"
+        android:paddingTop="5dp"
+        android:text="@string/humd"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/humd"
+        android:paddingTop="5dp"
+        android:text="@string/weather"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weather"
+        android:paddingTop="5dp"
+        android:text="@string/date"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignTop="@+id/city"
+        android:layout_toEndOf="@+id/date"
+        android:layout_toRightOf="@+id/date"
+        android:contentDescription="@string/weather"
+        android:paddingStart="20dp"
+        android:paddingLeft="20dp"
+        android:src="@drawable/sun" />
+</RelativeLayout>

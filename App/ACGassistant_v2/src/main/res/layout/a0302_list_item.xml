@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/a0302_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/a0302_imgView"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:contentDescription=""
+        android:scaleType="fitXY"
+        android:src="@drawable/eve01"
+        app:srcCompat="@drawable/eve01" />
+
+    <TextView
+        android:id="@+id/a0302_txt01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignStart="@+id/a0302_txt02"
+        android:layout_marginStart="-1dp"
+        android:text="名稱"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+
+    <TextView
+        android:id="@+id/a0302_txt02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/a0302_imgView"
+        android:layout_alignParentTop="false"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="39dp"
+        android:layout_toEndOf="@id/a0302_imgView"
+        android:gravity="start"
+        android:text="日期"
+        android:textAlignment="viewStart"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/a0302_txt03"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/a0302_txt02"
+        android:layout_alignStart="@id/a0302_txt02"
+        android:layout_marginStart="-2dp"
+        android:layout_marginTop="18dp"
+        android:scrollbars="vertical"
+        android:singleLine="false"
+        android:text="地點"
+        android:textSize="14sp" />
+
+
+    <TextView
+        android:id="@+id/a0302_txt04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/a0302_txt03"
+        android:layout_alignStart="@id/a0302_txt03"
+        android:text="id"
+        android:visibility="gone" />
+    <TextView
+        android:id="@+id/a0302_txt05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/a0302_txt04"
+        android:layout_alignStart="@id/a0302_txt04"
+        android:text="id"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/a0202_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@id/a0302_txt03"
+        android:layout_toEndOf="@id/a0302_txt03"
+        android:background="#00ffffff"
+        android:scaleType="centerInside"
+        android:src="@drawable/heart" />
+
+
+    <TextView
+        android:id="@+id/a0302_txt07"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="活動介紹"
+        android:visibility="gone" />
+    <TextView
+        android:id="@+id/latlng"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="經緯度"
+        android:visibility="gone" />
+
+</RelativeLayout>
+

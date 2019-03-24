@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a00_news">最新消息</string>
+    <string name="a00_animation">新番</string>
+    <string name="a00_event">活動</string>
+    <string name="a00_myActivity">我的日曆</string>
+</resources>

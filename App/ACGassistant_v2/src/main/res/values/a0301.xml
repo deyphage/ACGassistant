@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--a0301-->
+    <string name="a0301_imgV01">首頁</string>
+    <string name="a0301_imgV02">動畫</string>
+    <string name="a0301_imgV03">活動</string>
+    <string name="a0301_imgV04">我的行程</string>
+
+<!--a0302-->
+    <string name="a0302_imgV01">首頁</string>
+    <string name="a0302_imgV02">動畫</string>
+    <string name="a0302_imgV03">活動</string>
+    <string name="a0302_imgV04">我的行程</string>
+    <string name="a0302_txt01">EventName</string>
+    <string name="a0302_txt02">2019/3/21~2019/4/1</string>
+    <string name="a0302_txt03">地點</string>
+
+    <!--a0303-->
+    <string name="a0303_imgV01">首頁</string>
+    <string name="a0303_imgV02">動畫</string>
+    <string name="a0303_imgV03">活動</string>
+    <string name="a0303_imgV04">我的行程</string>
+    <string name="a0303_txt01">EventName</string>
+    <string name="a0303_txt02">2019/3/21~2019/4/1</string>
+    <string name="a0303_txt03">地點</string>
+    <string name="a0303_txt04">介紹內容</string>
+
+
+</resources>

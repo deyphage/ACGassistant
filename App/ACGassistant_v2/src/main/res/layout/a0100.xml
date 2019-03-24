@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".A0100">
+
+    <TextView
+        android:id="@+id/a0100_txt01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="100dp"
+        android:text="@string/a0100_txt01"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/a0100_imgV01"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/a0100_txt01"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/a0100_imgV01"
+        app:srcCompat="@drawable/titleimg" />
+
+    <ProgressBar
+        android:id="@+id/m0803_ProgressBar01"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/a0100_imgV01"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp"
+        android:background="@color/White"
+        android:max="100"
+        android:progress="10"
+        android:progressTint="@color/Blue"
+        android:secondaryProgress="20"
+        android:secondaryProgressTint="@color/Silver" />
+</RelativeLayout>

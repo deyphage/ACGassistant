@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--右邊三個點點的menu(這個請保留，之後再抽換)-->
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:icon="@drawable/more"
+        android:title="Main Menu"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/nav_avatar"
+                android:icon="@drawable/avatar"
+                android:title="LogIn"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/Google_LogIn"
+                android:icon="@drawable/googleg_color"
+                android:title="Google_LogIn"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/settings"
+                android:title="Settings"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+</menu>

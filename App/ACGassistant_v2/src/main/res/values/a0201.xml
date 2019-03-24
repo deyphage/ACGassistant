@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a0201_txt01">顯示格式</string>
+    <string name="a0201_txt02">日曆</string>
+    <string name="a0201_txt03">列表</string>
+    <string name="a0201_txt04">當前周播表</string>
+    <string name="a0201_txt05">我的追番List</string>
+    <string name="a0202_txt01">請在此放其他物件</string>
+    <string name="a0202_imgV01">首頁</string>
+    <string name="a0202_imgV02">動畫</string>
+    <string name="a0202_imgV03">活動</string>
+    <string name="a0202_imgV04">我的行程</string>
+    <string-array name="day">
+        <item>3月1日</item>
+        <item>3月2日</item>
+        <item>3月3日</item>
+        <item>3月4日</item>
+    </string-array>
+
+    <string-array name="name">
+        <item>七龍珠</item>
+        <item>火影</item>
+        <item>海賊王</item>
+        <item>第一神拳</item>
+    </string-array>
+    <string-array name="content">
+        <item>七龍珠七龍珠七龍珠七龍珠</item>
+        <item>火影火影火影火影</item>
+        <item>海賊王海賊王海賊王海賊王</item>
+        <item>第一神拳第一神拳第一神拳第一神拳</item>
+    </string-array>
+</resources>

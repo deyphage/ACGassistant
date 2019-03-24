@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/a0202_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/a0202_txt01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="日期" />
+
+    <ImageView
+        android:id="@+id/a0202_imgView"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/a0202_txt01"
+        android:contentDescription=""
+        android:scaleType="fitXY"
+        android:src="@drawable/ani01"
+        app:srcCompat="@drawable/ani01" />
+
+    <TextView
+        android:id="@+id/a0202_txt02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/a0202_imgView"
+        android:layout_alignParentTop="false"
+        android:layout_toEndOf="@id/a0202_imgView"
+        android:gravity="start"
+        android:text="名稱"
+        android:textAlignment="viewStart"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/a0202_txt03"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/a0202_txt02"
+        android:layout_alignStart="@id/a0202_txt02"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="12dp"
+        android:scrollbars="vertical"
+        android:singleLine="false"
+        android:text="活動內容"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:id="@+id/a0202_txt04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/a0202_txt03"
+        android:layout_alignStart="@id/a0202_txt03"
+        android:text="id"
+        android:visibility="gone" />
+    <TextView
+        android:id="@+id/a0202_txt05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/a0202_txt04"
+        android:layout_alignStart="@id/a0202_txt04"
+        android:text="id"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/a0202_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@id/a0202_txt03"
+        android:layout_toEndOf="@id/a0202_txt03"
+        android:background="#00ffffff"
+        android:scaleType="centerInside"
+        android:src="@drawable/heart" />
+
+</RelativeLayout>
+

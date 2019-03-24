@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a0503_imgV01">首頁</string>
+    <string name="a0503_imgV02">動畫</string>
+    <string name="a0503_imgV03">活動</string>
+    <string name="a0503_imgV04">我的行程</string>
+    <string name="a0503_txt01">通知</string>
+    <string name="a0503_ckb01">番劇更新</string>
+    <string name="a0503_ckb02">活動提醒</string>
+    <string name="a0503_txt02">通知提醒</string>
+    <string name="a0503_txt03">番劇</string>
+    <string name="a0503_spn01">時間選擇</string>
+    <string-array name="a0503_a01">
+        <item>10 mins</item>
+        <item>2 hrs</item>
+        <item>5 hrs</item>
+    </string-array>
+
+    <string name="a0503_txt04">活動</string>
+    <string name="a0503_spn02">時間選擇</string>
+    <string-array name="a0503_a02">
+        <item>1 Day</item>
+        <item>3 Days</item>
+        <item>7 Days</item>
+    </string-array>
+
+    <string name="a0503_txt05">其他</string>
+    <string name="a0503_txt06">回報問題</string>
+    <string name="a0503_txt07">關於我們</string>
+    <string name="a0502_txt01">Log In</string>
+    <string name="a0502_txt02">帳號</string>
+    <string name="a0502_txt03">密碼</string>
+    <string name="a0502_btn01">登入</string>
+    <string name="a0502_btn02">註冊</string>
+
+</resources>

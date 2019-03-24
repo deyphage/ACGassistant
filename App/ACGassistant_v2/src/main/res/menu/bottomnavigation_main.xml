@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_news"
+        android:icon="@drawable/home"
+        android:title="@string/a00_news" />
+
+    <item
+        android:id="@+id/navigation_animation"
+        android:icon="@drawable/television"
+        android:title="@string/a00_animation" />
+
+    <item
+        android:id="@+id/navigation_event"
+        android:icon="@drawable/running"
+        android:title="@string/a00_event" />
+
+    <item
+        android:id="@+id/navigation_myActivity"
+        android:icon="@drawable/calendar"
+        android:title="@string/a00_myActivity" />
+
+</menu>

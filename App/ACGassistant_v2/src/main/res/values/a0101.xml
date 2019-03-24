@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--a0100 start img -->
+    <string name="a0100_txt01">歡迎使用宅助理</string>
+    <string name="a0100_imgV01">進程式圖片</string>
+
+    <!--a0101 Title -->
+    <string name="a0101_imgV01">首頁</string>
+    <string name="a0101_imgV02">動畫</string>
+    <string name="a0101_imgV03">活動</string>
+    <string name="a0101_imgV04">我的行程</string>
+    <string name="a0101_txt01">最新消息</string>
+
+    <!--a0102 Topic page -->
+    <string name="a0102_btn01">Like</string>
+    <string name="a0102_btn02">Dislike</string>
+    <string name="a0102_txt01">這是從首頁點進來細項裡面的主標題</string>
+    <string name="a0102_txt02">子不談動就時活近型流使問這女不書一體足立越北我收國實邊管道新用電大人保中眼如氣小系生家影。關不服值語問委飛說境約；盡論上也親年關們統觀有，天資且只國南選，高運我改廣成表力前院走事，青毛的：未以用而度……力他開向山里有溫月源社景陽大許舞在般線法。</string>
+    <string name="a0102_txt03">就急你回的。是花素代不……際果國受字教小案的空聲也實想人心舉意裡共輕修現一心那型中女農向命學非我，我別人實車大立起……響全大童收由出書家依小：管成臺美這物錯示常有政一，樣過社面舞我回著勢這！能皮人魚……操備世打理。話看養印條他們能出許了關有媽相許我不們對飯否知作！</string>
+    <string name="a0102_txt04">留言版</string>
+    <string name="a0102_btn03">Send</string>
+    <string name="a0102_etxt01">請輸入您的留言!</string>
+    <string name="a0102_txt05">留言一</string>
+
+    <!--menu-->
+    <string name="action_reg">註冊</string>
+
+
+</resources>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/a0503_RL01"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context=".A0503">
+
+
+
+
+    <LinearLayout
+        android:id="@+id/a0503-LL1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/a0503_txt02"
+        android:layout_alignStart="@+id/a0503_txt02"
+        android:layout_marginStart="-2dp"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/a0503_txt03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="@dimen/pa01"
+            android:text="@string/a0503_txt03"
+            android:textColor="@color/Black"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/a0503_spn01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+
+            android:layout_marginTop="@dimen/pa01"
+            android:entries="@array/a0503_a01"
+            android:prompt="@string/a0503_spn01"
+            android:spinnerMode="dialog" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/a0503-LL2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/a0503-LL1"
+        android:layout_alignStart="@+id/a0503-LL1"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/a0503_txt04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/a0503_ckb02"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="58dp"
+            android:layout_marginBottom="-73dp"
+            android:text="@string/a0503_txt04"
+            android:textColor="@color/Black"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/a0503_spn02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/a0503-LL1"
+            android:entries="@array/a0503_a02"
+            android:prompt="@string/a0503_spn01"
+            android:spinnerMode="dialog" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/a0503_txt01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/a0503_txt05"
+        android:layout_marginTop="@dimen/Spacing"
+        android:layout_toEndOf="@id/a0503_txt05"
+        android:text="@string/a0503_txt01"
+        android:textColor="@color/Black"
+        android:textSize="18sp" />
+
+    <CheckBox
+        android:id="@+id/a0503_ckb01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/a0503_ckb01"
+        android:textColor="@color/Black"
+        android:textSize="18sp" />
+
+    <CheckBox
+        android:id="@+id/a0503_ckb02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/a0503_ckb01"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="73dp"
+        android:text="@string/a0503_ckb02"
+        android:textColor="@color/Black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/a0503_txt02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="137dp"
+        android:text="@string/a0503_txt02"
+        android:textColor="@color/Black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/a0503_txt05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/a0503-LL2"
+        android:layout_alignParentBottom="false"
+        android:layout_marginTop="@dimen/Spacing"
+        android:text="@string/a0503_txt05"
+        android:textColor="@color/Black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/a0503_txt06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentBottom="false"
+        android:layout_marginTop="@dimen/Spacing"
+        android:text="@string/a0503_txt06"
+        android:textColor="@color/Black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/a0503_txt07"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/a0503_txt01"
+        android:layout_alignStart="@+id/a0503_txt01"
+        android:layout_marginTop="@dimen/Spacing"
+        android:text="@string/a0503_txt07"
+        android:textColor="@color/Black"
+        android:textSize="18sp" />
+
+</RelativeLayout>

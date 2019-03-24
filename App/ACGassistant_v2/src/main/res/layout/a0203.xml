@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<ListView-->
+        <!--android:id="@+id/a0203_list"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:drawSelectorOnTop="false"-->
+        <!--android:padding="10dp" />-->
+
+    <ImageView
+        android:id="@+id/a0203_imgv01"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ani01"
+        app:srcCompat="@drawable/ani01" />
+
+    <TextView
+        android:id="@+id/a0203_txt01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/a0203_imgv01"
+        android:layout_toEndOf="@+id/a0203_imgv01"
+        android:text="date"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/a0203_txt02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/a0203_txt01"
+        android:layout_toEndOf="@+id/a0203_imgv01"
+        android:text="name"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/a0203_txt03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/a0203_txt02"
+        android:layout_toEndOf="@+id/a0203_imgv01"
+        android:text="追番"
+        android:textSize="18sp" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/a0203_txt03"
+        android:layout_alignStart="@id/a0203_txt03"
+        android:background="#00ffffff"
+        android:scaleType="centerInside"
+        android:src="@drawable/heart" />
+
+    <!--<VideoView-->
+        <!--android:id="@+id/videoView"-->
+        <!--android:layout_width="300dp"-->
+        <!--android:layout_height="200dp"-->
+        <!--android:layout_below="@+id/a0203_imgV01"-->
+        <!--android:layout_marginStart="10dp" />-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_below="@+id/imageButton"
+        android:layout_alignStart="@+id/a0203_imgv01"
+        android:layout_centerVertical="false"
+        android:layout_marginTop="45dp"
+        android:layout_marginRight="10dp"
+        tools:itemCount="1"></android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>
