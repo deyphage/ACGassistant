@@ -1,3 +1,4 @@
+//跳頁路徑
 function goto_a01(){
     window.location.href = 'https://acgassistant2019.000webhostapp.com/MobileWeb/a01.php#a0101';
 }
